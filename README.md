@@ -315,12 +315,6 @@ Delete logs older than a retention period
 
 DATA
 
---------
-
---------
-
-
-
 Data "aws_vpc" "ccs" {
 
 filter {
@@ -342,29 +336,14 @@ Vpc_id= data.aws_vpc.ccs.id
 
 
 Output
-
-----------
-
------------
-
 Output "instance_public_ip"{
-
-
-
 Value= aws_instance.web.public_ip
-
 }
-
-
-
 Local: Locals store values like strings, lists, numbers, or maps. These values can be used inside the module but cannot be changed from outside.
 
 locals {
-
- name   = "ccs"
-
+name   = "ccs"
  chandra = "sekhar"
-
  tags = {
 
    hello = "world"
@@ -386,13 +365,7 @@ resource "aws_instance" "aws" {
  tags         = local.tags
 
 }
-
-
-
-
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 How can code be deployed to a Kubernetes cluster using Jenkins, and how does Jenkins determine where to deploy it
 
 
