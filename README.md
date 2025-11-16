@@ -928,5 +928,5 @@ What is terraform untaint?
 		○ You mistakenly tainted a resource.
 		○ You decide the resource doesn’t need replacement.
 
-Example: terraform untaint aws_instance.my_ec2<img width="899" height="460" alt="image" src="https://github.com/user-attachments/assets/ef1d5316-9aa3-45fa-8df9-6a78356a14bf" />
+Example: terraform untaint aws_instance.my_ec2
 
