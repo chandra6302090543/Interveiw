@@ -910,3 +910,23 @@ A critical pod in production gets evicted due to node pressure. How would you pr
 
 
 I prevent critical pods from eviction by configuring them with proper requests and limits so they fall into the Guaranteed QoS class. I also use PriorityClasses, PodDisruptionBudgets, and autoscaling to protect them. QoS classes matter because Kubernetes evicts pods in order: BestEffort first, then Burstable, and Guaranteed last. By making critical pods Guaranteed, I ensure they are the most protected under node pressure.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+What is terraform taint?
+	• terraform taint marks a resource in the Terraform state file as tainted.
+	• A tainted resource will be destroyed and recreated during the next terraform apply.
+	• It’s useful when:
+		○ A resource is corrupted or misconfigured outside Terraform.
+		○ You want to force a fresh deployment without changing the configuration.
+
+          Example: terraform taint aws_instance.my_ec2
+
+What is terraform untaint?
+	• terraform untaint removes the taint mark from a resource.
+	• It ensures the resource will not be destroyed/recreated in the next apply.
+	• Useful when:
+		○ You mistakenly tainted a resource.
+		○ You decide the resource doesn’t need replacement.
+
+Example: terraform untaint aws_instance.my_ec2<img width="899" height="460" alt="image" src="https://github.com/user-attachments/assets/ef1d5316-9aa3-45fa-8df9-6a78356a14bf" />
+
